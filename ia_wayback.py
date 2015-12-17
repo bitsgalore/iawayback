@@ -63,11 +63,15 @@ def checkURL(url):
     return(available, urlWayback, status, timestamp)
 
 def main(argv=None, session=None):
+    # Support for calling script directly, rather than through 'ia'.
+    if argv is None:
+        argv = ['wayback'] + sys.argv[1:]
+
+    # Parse args.
     args = docopt(__doc__, argv=argv)
 
-    url = args['<url>']
-    available, urlWayback, status, timestamp = checkURL(url)
-    print(','.join([url, str(available), urlWayback, status, timestamp]))
+    available, urlWayback, status, timestamp = checkURL(args['<url>'])
+    print(','.join([args['<url>'], str(available), urlWayback, status, timestamp]))
 
 if __name__ == '__main__':
     main()
