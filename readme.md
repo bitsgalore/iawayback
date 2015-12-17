@@ -1,7 +1,7 @@
-# iawayback
+# IA command-line tool wayback plugin.
 
 ## About
-Iawayback is a simple, minimal Python wrapper around Internet Archive's Wayback Machine APIs, which are described here:
+`ia_wayback` is a simple, minimal Python wrapper around Internet Archive's Wayback Machine APIs, which are described here:
 
 <http://archive.org/help/wayback_api.php>
 
@@ -17,7 +17,7 @@ For now the functionality is limited to a check if a user-specified URL is avail
 
 ### Usage
 
-    usage: iawayback.py <url>
+    usage: ia_wayback.py <url>
 
 ### Positional arguments
 
@@ -25,7 +25,7 @@ For now the functionality is limited to a check if a user-specified URL is avail
 
 ## Example 1
 
-    iawayback.py www.projectmoonbase.com
+    ia_wayback.py www.projectmoonbase.com
 
 Which gives the following output:
 
@@ -33,7 +33,7 @@ Which gives the following output:
 
 ## Example 2
 
-    iawayback.py http://www.bitsgalore.org/2014/11/13/Demise-Of-Dutch-Blogosphere/
+    ia_wayback.py http://www.bitsgalore.org/2014/11/13/Demise-Of-Dutch-Blogosphere/
 
 This results in:
 
